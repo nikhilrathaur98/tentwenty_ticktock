@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Design tokens taken from the Figma file. Use them as bg-primary-600, text-primary-700, etc. */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary-50: #ebf5ff;
+  --color-primary-100: #e1effe;
+  --color-primary-600: #1c64f2;
+  --color-primary-700: #1a56db;
+  --color-primary-800: #1e429f;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-900: #111928;
+
+  --color-success-100: #def7ec;
+  --color-success-800: #03543f;
+  --color-warning-100: #fdf6b2;
+  --color-warning-800: #723b13;
+  --color-danger-100: #fce8f3;
+  --color-danger-600: #e02424;
+  --color-danger-800: #99154b;
+  --color-orange-400: #ff8a4c;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
