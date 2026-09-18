@@ -71,8 +71,8 @@ export function DateRangeFilter({ from, to, onChange }: DateRangeFilterProps) {
             From
             <Input
               type="date"
-              min="2024-01-01"
-              max="2024-12-31"
+              min="2025-12-29"
+              max="2026-12-25"
               value={draftFrom}
               onChange={(e) => setDraftFrom(e.target.value)}
             />
@@ -81,8 +81,8 @@ export function DateRangeFilter({ from, to, onChange }: DateRangeFilterProps) {
             To
             <Input
               type="date"
-              min="2024-01-01"
-              max="2024-12-31"
+              min="2025-12-29"
+              max="2026-12-25"
               value={draftTo}
               onChange={(e) => setDraftTo(e.target.value)}
             />

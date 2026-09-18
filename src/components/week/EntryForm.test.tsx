@@ -9,7 +9,7 @@ const options = {
 };
 
 const emptyValues = {
-  date: "2024-01-02",
+  date: "2026-01-02",
   projectId: "",
   workType: "",
   description: "",
@@ -63,7 +63,7 @@ describe("EntryForm", () => {
     await userEvent.click(screen.getByRole("button", { name: "Add entry" }));
 
     expect(onSubmit).toHaveBeenCalledWith({
-      date: "2024-01-02",
+      date: "2026-01-02",
       projectId: "p1",
       workType: "Bug fixes",
       description: "Fix header",

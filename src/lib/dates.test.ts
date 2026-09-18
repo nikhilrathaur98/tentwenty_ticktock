@@ -10,31 +10,34 @@ import {
 describe("dates", () => {
   it("returns Monday to Friday for a week", () => {
     expect(getWeekRange(1)).toEqual({
-      startDate: "2024-01-01",
-      endDate: "2024-01-05",
+      startDate: "2025-12-29",
+      endDate: "2026-01-02",
     });
     expect(getWeekRange(5)).toEqual({
-      startDate: "2024-01-29",
-      endDate: "2024-02-02",
+      startDate: "2026-01-26",
+      endDate: "2026-01-30",
     });
   });
 
-  it("formats ranges in the same month and across months", () => {
-    expect(formatDateRange("2024-01-01", "2024-01-05")).toBe(
-      "1 - 5 January, 2024",
+  it("formats ranges in the same month, across months, and across years", () => {
+    expect(formatDateRange("2026-01-26", "2026-01-30")).toBe(
+      "26 - 30 January, 2026",
     );
-    expect(formatDateRange("2024-01-29", "2024-02-02")).toBe(
-      "29 January - 2 February, 2024",
+    expect(formatDateRange("2026-01-29", "2026-02-02")).toBe(
+      "29 January - 2 February, 2026",
+    );
+    expect(formatDateRange("2025-12-29", "2026-01-02")).toBe(
+      "29 December, 2025 - 2 January, 2026",
     );
   });
 
   it("formats a short date", () => {
-    expect(formatShortDate("2024-01-21")).toBe("Jan 21");
+    expect(formatShortDate("2026-01-21")).toBe("Jan 21");
   });
 
   it("finds the week of a working day", () => {
-    expect(getWeekForDate("2024-01-03")).toBe(1);
-    expect(getWeekForDate("2024-01-06")).toBeNull(); // Saturday
+    expect(getWeekForDate("2025-12-31")).toBe(1);
+    expect(getWeekForDate("2026-01-03")).toBeNull(); // Saturday
   });
 
   it("validates ISO dates", () => {

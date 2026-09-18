@@ -14,7 +14,7 @@ import type { SortField, SortOrder, TimesheetStatus } from "@/types";
 
 const ALLOWED_LIMITS = [5, 10, 20];
 
-// GET /api/timesheets?page=1&limit=5&status=completed&from=2024-01-01&to=2024-01-31&sortBy=week&order=asc
+// GET /api/timesheets?page=1&limit=5&status=completed&from=2025-12-29&to=2026-01-31&sortBy=week&order=asc
 export async function GET(request: NextRequest) {
   const user = await getCurrentUser();
   if (!user) return unauthorized();

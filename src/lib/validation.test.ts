@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { validateEntry } from "@/lib/validation";
 
 const validEntry = {
-  date: "2024-01-02",
+  date: "2026-01-02",
   projectId: "p1",
   workType: "Bug fixes",
   description: "Fix login bug",

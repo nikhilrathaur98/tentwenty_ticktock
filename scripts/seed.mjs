@@ -4,7 +4,7 @@ import { writeFileSync, rmSync, mkdirSync } from "node:fs";
 import path from "node:path";
 
 const TOTAL_WEEKS = 52;
-const FIRST_MONDAY = Date.UTC(2024, 0, 1); // Monday, 1 January 2024
+const FIRST_MONDAY = Date.UTC(2025, 11, 29); // Monday, 29 December 2025 (week containing 1 January 2026)
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 const users = [

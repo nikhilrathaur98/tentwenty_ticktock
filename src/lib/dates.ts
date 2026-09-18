@@ -4,7 +4,7 @@
 export const TOTAL_WEEKS = 52;
 export const WORK_DAYS_PER_WEEK = 5;
 export const HOURS_PER_WEEK = 40;
-const FIRST_MONDAY = "2024-01-01";
+const FIRST_MONDAY = "2025-12-29";
 
 const MONTHS = [
   "January",
@@ -45,7 +45,7 @@ export function isValidWeek(week: number): boolean {
   return Number.isInteger(week) && week >= 1 && week <= TOTAL_WEEKS;
 }
 
-/** Monday of the given week number (week 1 starts on 1 January 2024). */
+/** Monday of the given week number (week 1 starts on 29 December 2025, the Monday of the week containing 1 January 2026). */
 export function getWeekStart(week: number): string {
   return addDays(FIRST_MONDAY, (week - 1) * 7);
 }
@@ -74,7 +74,7 @@ export function getWeekForDate(iso: string): number | null {
   return null;
 }
 
-/** "1 - 5 January, 2024" or "29 January - 2 February, 2024" */
+/** "1 - 5 January, 2026" or "29 January - 2 February, 2026" */
 export function formatDateRange(startIso: string, endIso: string): string {
   const start = parseISODate(startIso);
   const end = parseISODate(endIso);

@@ -2,7 +2,7 @@
 
 A small SaaS-style timesheet app built for the TenTwenty Frontend Technical Assessment.
 
-**Live demo:** https://YOUR-PROJECT.vercel.app
+**Live demo:** https://tentwenty-ticktock-amber.vercel.app/
 **Demo login:** `john@example.com` / `password123`
 
 ## Features
@@ -37,7 +37,7 @@ A small SaaS-style timesheet app built for the TenTwenty Frontend Technical Asse
 Requirements: Node.js 20.9 or newer, npm.
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/tentwenty_ticktock.git
+git clone https://github.com/nikhilrathaur98/tentwenty_ticktock.git
 cd tentwenty_ticktock
 npm install
 ```
@@ -114,7 +114,7 @@ Component -> hook (useApi) -> fetch("/api/...") -> Route Handler -> lib/db.ts ->
 
 ## Assumptions and notes
 
-- **Weeks**: a timesheet week is Monday to Friday. Week 1 starts on Monday 1 January 2024, and there are 52 weeks. Some dates in the design (for example "28 January - 1 February") look like placeholders, so real calendar weeks are used instead.
+- **Weeks**: a timesheet week is Monday to Friday. Week 1 starts on Monday 29 December 2025 (the Monday of the week containing 1 January 2026), and there are 52 weeks. Some dates in the design (for example "28 January - 1 February") look like placeholders, so real calendar weeks are used instead.
 - **Statuses**: `completed` = 40 or more hours, `incomplete` = between 1 and 39 hours, `missing` = 0 hours.
 - **Actions**: View, Update and Create all open the week view. Entries can be added, edited and deleted in every week.
 - **Hours**: each entry is a whole number from 1 to 24.
@@ -125,4 +125,4 @@ Component -> hook (useApi) -> fetch("/api/...") -> Route Handler -> lib/db.ts ->
 
 ## Time spent
 
-About XX hours (setup X h, data + API X h, UI X h, tests + README X h, deployment X h).
+About 4-5 hours

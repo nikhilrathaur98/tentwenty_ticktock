@@ -31,9 +31,9 @@ describe("getStatus", () => {
 describe("buildTimesheets", () => {
   it("adds up hours per week", () => {
     const timesheets = buildTimesheets([
-      entry("2024-01-01", 8),
-      entry("2024-01-02", 8),
-      entry("2024-01-08", 40),
+      entry("2025-12-29", 8),
+      entry("2025-12-30", 8),
+      entry("2026-01-05", 40),
     ]);
     expect(timesheets).toHaveLength(52);
     expect(timesheets[0]).toMatchObject({
@@ -55,12 +55,12 @@ describe("buildTimesheets", () => {
 });
 
 describe("filterTimesheets", () => {
-  const timesheets = buildTimesheets([entry("2024-01-01", 40)]);
+  const timesheets = buildTimesheets([entry("2025-12-29", 40)]);
 
   it("returns every week the date range touches", () => {
     const result = filterTimesheets(timesheets, {
-      from: "2024-01-03",
-      to: "2024-01-16",
+      from: "2025-12-31",
+      to: "2026-01-13",
     });
     expect(result.map((t) => t.week)).toEqual([1, 2, 3]);
   });
